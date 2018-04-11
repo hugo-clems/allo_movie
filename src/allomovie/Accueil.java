@@ -33,10 +33,6 @@ public class Accueil extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnAccueil1 = new javax.swing.JButton();
-
-        btnAccueil1.setText("Accueil");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("AlloMovie");
         setBackground(new java.awt.Color(255, 255, 255));
@@ -92,6 +88,5 @@ public class Accueil extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAccueil1;
     // End of variables declaration//GEN-END:variables
 }

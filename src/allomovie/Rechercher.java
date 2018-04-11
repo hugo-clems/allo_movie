@@ -1,6 +1,7 @@
 package allomovie;
 
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 
 /**
  * Interface de recherche de séance de cinéma.
@@ -32,6 +33,11 @@ public class Rechercher extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1050, 500));
 
         btnAccueil.setText("Accueil");
+        btnAccueil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAccueilActionPerformed(evt);
+            }
+        });
 
         btnCompte.setText("Compte");
         btnCompte.addActionListener(new java.awt.event.ActionListener() {
@@ -73,6 +79,15 @@ public class Rechercher extends javax.swing.JPanel {
     private void btnCompteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompteActionPerformed
         JOptionPane.showMessageDialog(null, "Interface non implémentée dans ce prototype");
     }//GEN-LAST:event_btnCompteActionPerformed
+
+    /**
+     * Réinitialise la fenêtre quand on clique sur le bouton "Accueil"
+     * @param evt non utilisé
+     */
+    private void btnAccueilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccueilActionPerformed
+        Accueil accueil = (Accueil) SwingUtilities.getWindowAncestor(this);
+        accueil.showPanel(new Rechercher());
+    }//GEN-LAST:event_btnAccueilActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

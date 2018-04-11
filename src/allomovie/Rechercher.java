@@ -29,9 +29,13 @@ public class Rechercher extends javax.swing.JPanel {
         btnAccueil = new javax.swing.JButton();
         btnCompte = new javax.swing.JButton();
         lblTitre = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(60, 63, 65));
         setPreferredSize(new java.awt.Dimension(1050, 500));
 
+        btnAccueil.setBackground(new java.awt.Color(60, 63, 65));
+        btnAccueil.setForeground(new java.awt.Color(255, 255, 255));
         btnAccueil.setText("Accueil");
         btnAccueil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -39,6 +43,8 @@ public class Rechercher extends javax.swing.JPanel {
             }
         });
 
+        btnCompte.setBackground(new java.awt.Color(60, 63, 65));
+        btnCompte.setForeground(new java.awt.Color(255, 255, 255));
         btnCompte.setText("Compte");
         btnCompte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,8 +53,16 @@ public class Rechercher extends javax.swing.JPanel {
         });
 
         lblTitre.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        lblTitre.setForeground(new java.awt.Color(255, 255, 255));
         lblTitre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitre.setText("Rechercher une séance");
+
+        jButton1.setText("Afficher Vue Film");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -60,6 +74,10 @@ public class Rechercher extends javax.swing.JPanel {
                 .addComponent(lblTitre, javax.swing.GroupLayout.DEFAULT_SIZE, 855, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnCompte))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(233, 233, 233)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -68,7 +86,9 @@ public class Rechercher extends javax.swing.JPanel {
                     .addComponent(lblTitre, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAccueil)
                     .addComponent(btnCompte))
-                .addContainerGap(464, Short.MAX_VALUE))
+                .addGap(96, 96, 96)
+                .addComponent(jButton1)
+                .addContainerGap(339, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -89,10 +109,16 @@ public class Rechercher extends javax.swing.JPanel {
         accueil.showPanel(new Rechercher());
     }//GEN-LAST:event_btnAccueilActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Accueil accueil = (Accueil) SwingUtilities.getWindowAncestor(this);
+        accueil.showPanel(new Film());
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAccueil;
     private javax.swing.JButton btnCompte;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel lblTitre;
     // End of variables declaration//GEN-END:variables
 }

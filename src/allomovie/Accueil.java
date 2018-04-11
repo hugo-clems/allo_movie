@@ -9,6 +9,8 @@ import javax.swing.JPanel;
  */
 public class Accueil extends javax.swing.JFrame {
 
+    private JPanel vue;
+    
     /**
      * Création de la fenêtre.
      */
@@ -16,8 +18,8 @@ public class Accueil extends javax.swing.JFrame {
         initComponents();
         
         // Au lancement on charge la JPanel de recherche
-        Film r = new Film();
-        showPanel(r);
+        vue = new Rechercher();
+        showPanel(vue);
     }
     
     /**

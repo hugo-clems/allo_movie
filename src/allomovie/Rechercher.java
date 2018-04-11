@@ -1,13 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package allomovie;
 
+import javax.swing.JOptionPane;
+
 /**
- *
- * @author hugo
+ * Interface de recherche de séance de cinéma.
+ * @author CLEMENT Hugo - DL 1
+ * @author MORIN Céline - DL 1
  */
 public class Rechercher extends javax.swing.JPanel {
 
@@ -29,16 +27,18 @@ public class Rechercher extends javax.swing.JPanel {
 
         btnAccueil = new javax.swing.JButton();
         btnCompte = new javax.swing.JButton();
-        btnRetour = new javax.swing.JButton();
         lblTitre = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(1050, 600));
+        setPreferredSize(new java.awt.Dimension(1050, 500));
 
         btnAccueil.setText("Accueil");
 
         btnCompte.setText("Compte");
-
-        btnRetour.setText("Retour");
+        btnCompte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCompteActionPerformed(evt);
+            }
+        });
 
         lblTitre.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         lblTitre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -51,9 +51,7 @@ public class Rechercher extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(btnAccueil)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnRetour)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblTitre, javax.swing.GroupLayout.DEFAULT_SIZE, 764, Short.MAX_VALUE)
+                .addComponent(lblTitre, javax.swing.GroupLayout.DEFAULT_SIZE, 855, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnCompte))
         );
@@ -62,19 +60,24 @@ public class Rechercher extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(lblTitre, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                        .addComponent(btnRetour)
-                        .addComponent(btnAccueil))
+                    .addComponent(btnAccueil)
                     .addComponent(btnCompte))
-                .addContainerGap(564, Short.MAX_VALUE))
+                .addContainerGap(464, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    /**
+     * Affiche un message quand on clique sur le bouton "Compte".
+     * @param evt non utilisé
+     */
+    private void btnCompteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompteActionPerformed
+        JOptionPane.showMessageDialog(null, "Interface non implémentée dans ce prototype");
+    }//GEN-LAST:event_btnCompteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAccueil;
     private javax.swing.JButton btnCompte;
-    private javax.swing.JButton btnRetour;
     private javax.swing.JLabel lblTitre;
     // End of variables declaration//GEN-END:variables
 }

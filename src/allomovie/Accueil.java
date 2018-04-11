@@ -1,23 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package allomovie;
 
+import javax.swing.JPanel;
+
 /**
- *
- * @author hugo
+ * Fenêtre de l'application.
+ * @author CLEMENT Hugo - DL 1
+ * @author MORIN Céline - DL 1
  */
 public class Accueil extends javax.swing.JFrame {
 
     /**
-     * Creates new form Accueil
+     * Création de la fenêtre.
      */
     public Accueil() {
         initComponents();
+        
+        // Au lancement on charge la JPanel de recherche
         Rechercher r = new Rechercher();
-        this.setContentPane(r);
+        showPanel(r);
+    }
+    
+    /**
+     * Affiche un JPanel dans la fenêtre
+     * @param lePanel le JPanel à afficher
+     */
+    public void showPanel(JPanel lePanel) {
+        this.setContentPane(lePanel);
         this.repaint();
         this.revalidate();
     }
@@ -51,6 +59,7 @@ public class Accueil extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     /**
+     * Lancement de l'application.
      * @param args the command line arguments
      */
     public static void main(String args[]) {

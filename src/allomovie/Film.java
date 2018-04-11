@@ -53,13 +53,11 @@ public class Film extends javax.swing.JPanel {
         jFormattedTextField1 = new javax.swing.JFormattedTextField();
         jSeparator1 = new javax.swing.JSeparator();
 
-        setBackground(new java.awt.Color(60, 63, 65));
         setBorder(new javax.swing.border.MatteBorder(null));
         setMaximumSize(new java.awt.Dimension(1050, 500));
         setMinimumSize(new java.awt.Dimension(1050, 500));
         setPreferredSize(new java.awt.Dimension(1050, 500));
 
-        btnAccueil.setBackground(new java.awt.Color(60, 63, 65));
         btnAccueil.setForeground(new java.awt.Color(255, 255, 255));
         btnAccueil.setText("Accueil");
         btnAccueil.addActionListener(new java.awt.event.ActionListener() {
@@ -68,7 +66,6 @@ public class Film extends javax.swing.JPanel {
             }
         });
 
-        btnCompte.setBackground(new java.awt.Color(60, 63, 65));
         btnCompte.setForeground(new java.awt.Color(255, 255, 255));
         btnCompte.setText("Compte");
         btnCompte.addActionListener(new java.awt.event.ActionListener() {
@@ -77,7 +74,6 @@ public class Film extends javax.swing.JPanel {
             }
         });
 
-        btnRetour.setBackground(new java.awt.Color(60, 63, 65));
         btnRetour.setForeground(new java.awt.Color(255, 255, 255));
         btnRetour.setText("Retour");
         btnRetour.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +88,7 @@ public class Film extends javax.swing.JPanel {
         jLabel1.setText("Star Wars : Épisode III - La Revanche des Sith");
         jLabel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ressources/star_wars_3.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ressources/rsz_stars_wars_3_bis.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
 
         jScrollPane1.setBorder(null);
@@ -116,11 +112,9 @@ public class Film extends javax.swing.JPanel {
         jTextArea2.setOpaque(false);
         jScrollPane2.setViewportView(jTextArea2);
 
-        commenter.setBackground(new java.awt.Color(60, 63, 65));
         commenter.setForeground(new java.awt.Color(255, 255, 255));
         commenter.setText("Déjà vu ce film ? Laisse un commentaire !");
 
-        jComboBox1.setBackground(new java.awt.Color(60, 63, 65));
         jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -133,15 +127,12 @@ public class Film extends javax.swing.JPanel {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText(" Nombre de places :");
 
-        jComboBox2.setBackground(new java.awt.Color(60, 63, 65));
         jComboBox2.setForeground(new java.awt.Color(255, 255, 255));
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox3.setBackground(new java.awt.Color(60, 63, 65));
         jComboBox3.setForeground(new java.awt.Color(255, 255, 255));
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        reserver.setBackground(new java.awt.Color(60, 63, 65));
         reserver.setForeground(new java.awt.Color(255, 255, 255));
         reserver.setText("Réserver");
 
@@ -149,7 +140,7 @@ public class Film extends javax.swing.JPanel {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Paramètres billet(s)");
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ressources/star_wars_3.jpg"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ressources/rsz_star_wars_3.jpg"))); // NOI18N
         jLabel7.setText("jLabel2");
 
         jFormattedTextField1.setBackground(new java.awt.Color(60, 63, 65));

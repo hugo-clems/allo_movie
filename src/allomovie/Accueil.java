@@ -5,8 +5,6 @@
  */
 package allomovie;
 
-import javax.swing.JPanel;
-
 /**
  *
  * @author hugo
@@ -36,7 +34,7 @@ public class Accueil extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("AlloMovie");
         setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(1050, 600));
+        setPreferredSize(new java.awt.Dimension(1050, 500));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

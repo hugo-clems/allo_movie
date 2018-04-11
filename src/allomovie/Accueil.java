@@ -16,7 +16,7 @@ public class Accueil extends javax.swing.JFrame {
         initComponents();
         
         // Au lancement on charge la JPanel de recherche
-        Rechercher r = new Rechercher();
+        Film r = new Film();
         showPanel(r);
     }
     

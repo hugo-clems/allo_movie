@@ -5,7 +5,6 @@
  */
 package allomovie;
 
-import java.awt.Color;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
@@ -49,11 +48,14 @@ public class Avis extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(60, 63, 65));
         setBorder(new javax.swing.border.MatteBorder(null));
+        setForeground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(1050, 500));
         setMinimumSize(new java.awt.Dimension(1050, 500));
         setPreferredSize(new java.awt.Dimension(1050, 500));
 
+        btnAccueil.setBackground(new java.awt.Color(60, 63, 65));
         btnAccueil.setForeground(new java.awt.Color(255, 255, 255));
         btnAccueil.setText("Accueil");
         btnAccueil.addActionListener(new java.awt.event.ActionListener() {
@@ -62,6 +64,7 @@ public class Avis extends javax.swing.JPanel {
             }
         });
 
+        btnCompte.setBackground(new java.awt.Color(60, 63, 65));
         btnCompte.setForeground(new java.awt.Color(255, 255, 255));
         btnCompte.setText("Compte");
         btnCompte.addActionListener(new java.awt.event.ActionListener() {
@@ -70,6 +73,7 @@ public class Avis extends javax.swing.JPanel {
             }
         });
 
+        btnRetour.setBackground(new java.awt.Color(60, 63, 65));
         btnRetour.setForeground(new java.awt.Color(255, 255, 255));
         btnRetour.setText("Retour");
         btnRetour.addActionListener(new java.awt.event.ActionListener() {
@@ -94,24 +98,33 @@ public class Avis extends javax.swing.JPanel {
         lblTitre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitre.setText("Donner son avis");
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Votre commentaire :");
 
-        jTextPane1.setBackground(new java.awt.Color(187, 187, 187));
+        jTextPane1.setBackground(new java.awt.Color(60, 63, 65));
         jScrollPane1.setViewportView(jTextPane1);
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Votre note :");
 
+        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setSelected(true);
         jRadioButton1.setText("1");
 
+        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton2.setText("2");
 
+        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton3.setText("3");
 
+        jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton4.setText("4");
 
+        jRadioButton5.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton5.setText("5");
 
+        jButton1.setBackground(new java.awt.Color(60, 63, 65));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Annuler");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,6 +132,8 @@ public class Avis extends javax.swing.JPanel {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(60, 63, 65));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Commenter");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

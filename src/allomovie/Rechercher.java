@@ -5,6 +5,8 @@
  */
 package allomovie;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
@@ -19,6 +21,24 @@ public class Rechercher extends javax.swing.JPanel {
      */
     public Rechercher() {
         initComponents();
+        remplirComboBox();
+    }
+    
+    private void remplirComboBox() {
+        jComboBoxCinema.removeAllItems();
+        jComboBoxCinema.addItem("Cinéma Gaumont");
+        jComboBoxCinema.addItem("Cinéma Popcorn");
+        jComboBoxCinema.addItem("Cinéma du rire");
+        jComboBoxCinema.addItem("Cinéma Labège");
+        
+        jComboBoxTheme.removeAllItems();
+        jComboBoxTheme.addItem("Action");
+        jComboBoxTheme.addItem("SF");
+        jComboBoxTheme.addItem("Fantastique");
+        jComboBoxTheme.addItem("Aventure");
+        jComboBoxTheme.addItem("Documentaire");
+        jComboBoxTheme.addItem("Drame");
+        jComboBoxTheme.addItem("Romantique");
     }
 
     /**
@@ -66,32 +86,35 @@ public class Rechercher extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jFormattedTextFieldJour = new javax.swing.JFormattedTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jTextFieldDebut = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jTextFieldFin = new javax.swing.JTextField();
+        jButtonAuPlusTot = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField4 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        jComboBoxCinema = new javax.swing.JComboBox<>();
+        jTextFieldVille = new javax.swing.JTextField();
+        jButtonAuPlusProche = new javax.swing.JButton();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
         jRadioButton4 = new javax.swing.JRadioButton();
         jRadioButton5 = new javax.swing.JRadioButton();
         jLabel13 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBoxTheme = new javax.swing.JComboBox<>();
         jButton3 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(60, 63, 65));
         setBorder(new javax.swing.border.MatteBorder(null));
+        setForeground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(1050, 500));
         setMinimumSize(new java.awt.Dimension(1050, 500));
         setPreferredSize(new java.awt.Dimension(1050, 500));
 
+        btnAccueil.setBackground(new java.awt.Color(60, 63, 65));
         btnAccueil.setForeground(new java.awt.Color(255, 255, 255));
         btnAccueil.setText("Accueil");
         btnAccueil.addActionListener(new java.awt.event.ActionListener() {
@@ -100,6 +123,7 @@ public class Rechercher extends javax.swing.JPanel {
             }
         });
 
+        btnCompte.setBackground(new java.awt.Color(60, 63, 65));
         btnCompte.setForeground(new java.awt.Color(255, 255, 255));
         btnCompte.setText("Compte");
         btnCompte.addActionListener(new java.awt.event.ActionListener() {
@@ -121,17 +145,22 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
+        jPanel1.setBackground(new java.awt.Color(60, 63, 65));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(746, 755));
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ressources/rsz_star_wars_3.jpg"))); // NOI18N
         jLabel7.setText("jLabel7");
         jLabel7.setBorder(new javax.swing.border.MatteBorder(null));
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ressources/rsz_star_wars_8.png"))); // NOI18N
         jLabel9.setText("jLabel7");
         jLabel9.setBorder(new javax.swing.border.MatteBorder(null));
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ressources/rsz_star_wars_3.jpg"))); // NOI18N
         jLabel10.setText("jLabel7");
         jLabel10.setBorder(new javax.swing.border.MatteBorder(null));
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -141,14 +170,17 @@ public class Rechercher extends javax.swing.JPanel {
         });
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ressources/rsz_star_wars_5.png"))); // NOI18N
         jLabel11.setText("jLabel7");
         jLabel11.setBorder(new javax.swing.border.MatteBorder(null));
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ressources/rsz_star_wars_5.png"))); // NOI18N
         jLabel12.setText("jLabel7");
         jLabel12.setBorder(new javax.swing.border.MatteBorder(null));
 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ressources/rsz_star_wars_8.png"))); // NOI18N
         jLabel14.setText("jLabel7");
         jLabel14.setBorder(new javax.swing.border.MatteBorder(null));
 
@@ -156,7 +188,9 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextArea1.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea1.setColumns(20);
+        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea1.setRows(5);
         jTextArea1.setText("    Cinéma Popcorn\n       27/04/2018\n            18h30");
         jTextArea1.setAutoscrolls(false);
@@ -167,7 +201,9 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane3.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextArea2.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea2.setColumns(20);
+        jTextArea2.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea2.setRows(5);
         jTextArea2.setText("   Cinéma Gaumont\n       30/04/2018\n              21h");
         jTextArea2.setAutoscrolls(false);
@@ -178,7 +214,9 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane4.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane4.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextArea3.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea3.setColumns(20);
+        jTextArea3.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea3.setRows(5);
         jTextArea3.setText("    Cinéma Popcorn\n       30/04/2018\n              21h");
         jTextArea3.setAutoscrolls(false);
@@ -189,7 +227,9 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane5.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane5.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextArea4.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea4.setColumns(20);
+        jTextArea4.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea4.setRows(5);
         jTextArea4.setText("    Cinéma Popcorn\n       27/04/2018\n            16h30");
         jTextArea4.setAutoscrolls(false);
@@ -200,7 +240,9 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane6.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane6.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextArea5.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea5.setColumns(20);
+        jTextArea5.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea5.setRows(5);
         jTextArea5.setText("   Cinéma Gaumont\n       26/04/2018\n            12h30");
         jTextArea5.setAutoscrolls(false);
@@ -211,7 +253,9 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane7.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane7.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextArea6.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea6.setColumns(20);
+        jTextArea6.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea6.setRows(5);
         jTextArea6.setText("   Cinéma Gaumont\n       26/04/2018\n            10h50");
         jTextArea6.setAutoscrolls(false);
@@ -224,6 +268,7 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane7.setViewportView(jTextArea6);
 
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ressources/rsz_star_wars_3.jpg"))); // NOI18N
         jLabel15.setText("jLabel7");
         jLabel15.setBorder(new javax.swing.border.MatteBorder(null));
 
@@ -231,7 +276,9 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane8.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane8.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextArea7.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea7.setColumns(20);
+        jTextArea7.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea7.setRows(5);
         jTextArea7.setText("    Cinéma Popcorn\n       27/04/2018\n            18h30");
         jTextArea7.setAutoscrolls(false);
@@ -239,6 +286,7 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane8.setViewportView(jTextArea7);
 
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ressources/rsz_star_wars_5.png"))); // NOI18N
         jLabel16.setText("jLabel7");
         jLabel16.setBorder(new javax.swing.border.MatteBorder(null));
 
@@ -246,7 +294,9 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane9.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane9.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextArea8.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea8.setColumns(20);
+        jTextArea8.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea8.setRows(5);
         jTextArea8.setText("   Cinéma Gaumont\n       30/04/2018\n              21h");
         jTextArea8.setAutoscrolls(false);
@@ -257,7 +307,9 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane10.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane10.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextArea9.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea9.setColumns(20);
+        jTextArea9.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea9.setRows(5);
         jTextArea9.setText("    Cinéma Popcorn\n       30/04/2018\n              21h");
         jTextArea9.setAutoscrolls(false);
@@ -265,6 +317,7 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane10.setViewportView(jTextArea9);
 
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ressources/rsz_star_wars_8.png"))); // NOI18N
         jLabel17.setText("jLabel7");
         jLabel17.setBorder(new javax.swing.border.MatteBorder(null));
 
@@ -337,54 +390,109 @@ public class Rechercher extends javax.swing.JPanel {
 
         jScrollPane1.setViewportView(jPanel1);
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Titre film :");
 
+        jTextField1.setBackground(new java.awt.Color(60, 63, 65));
+        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Le");
 
-        jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("d/MM"))));
-        jFormattedTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jFormattedTextField1.setText("JJ/MM");
+        jFormattedTextFieldJour.setBackground(new java.awt.Color(60, 63, 65));
+        jFormattedTextFieldJour.setForeground(new java.awt.Color(255, 255, 255));
+        jFormattedTextFieldJour.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("d/MM"))));
+        jFormattedTextFieldJour.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jFormattedTextFieldJour.setText("JJ/MM");
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("à partir de");
 
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField2.setText("HH:MM");
+        jTextFieldDebut.setBackground(new java.awt.Color(60, 63, 65));
+        jTextFieldDebut.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldDebut.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldDebut.setText("HH:MM");
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("jusqu'à");
 
-        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField3.setText("HH:MM");
+        jTextFieldFin.setBackground(new java.awt.Color(60, 63, 65));
+        jTextFieldFin.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldFin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldFin.setText("HH:MM");
 
-        jButton1.setText("Au plus tôt");
+        jButtonAuPlusTot.setBackground(new java.awt.Color(84, 114, 174));
+        jButtonAuPlusTot.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonAuPlusTot.setText("Au plus tôt");
+        jButtonAuPlusTot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAuPlusTotActionPerformed(evt);
+            }
+        });
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Ville :");
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Cinéma :");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxCinema.setBackground(new java.awt.Color(60, 63, 65));
+        jComboBoxCinema.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBoxCinema.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jButton2.setText("Au plus proche");
-        jButton2.setMaximumSize(new java.awt.Dimension(100, 32));
-        jButton2.setMinimumSize(new java.awt.Dimension(100, 32));
-        jButton2.setPreferredSize(new java.awt.Dimension(100, 32));
+        jTextFieldVille.setBackground(new java.awt.Color(60, 63, 65));
+        jTextFieldVille.setForeground(new java.awt.Color(255, 255, 255));
 
+        jButtonAuPlusProche.setBackground(new java.awt.Color(84, 114, 174));
+        jButtonAuPlusProche.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonAuPlusProche.setText("Au plus proche");
+        jButtonAuPlusProche.setMaximumSize(new java.awt.Dimension(100, 32));
+        jButtonAuPlusProche.setMinimumSize(new java.awt.Dimension(100, 32));
+        jButtonAuPlusProche.setPreferredSize(new java.awt.Dimension(100, 32));
+        jButtonAuPlusProche.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAuPlusProcheActionPerformed(evt);
+            }
+        });
+
+        jRadioButton1.setBackground(new java.awt.Color(60, 63, 65));
+        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setSelected(true);
         jRadioButton1.setText("1");
 
+        jRadioButton2.setBackground(new java.awt.Color(60, 63, 65));
+        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton2.setText("2");
 
+        jRadioButton3.setBackground(new java.awt.Color(60, 63, 65));
+        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton3.setText("3");
 
+        jRadioButton4.setBackground(new java.awt.Color(60, 63, 65));
+        jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton4.setText("4");
 
+        jRadioButton5.setBackground(new java.awt.Color(60, 63, 65));
+        jRadioButton5.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton5.setText("5");
 
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Thème :");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxTheme.setBackground(new java.awt.Color(60, 63, 65));
+        jComboBoxTheme.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBoxTheme.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        jButton3.setBackground(new java.awt.Color(175, 0, 0));
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Réinitialiser la recherche");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Avis >=");
 
@@ -411,7 +519,7 @@ public class Rechercher extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jFormattedTextFieldJour, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel3)
@@ -420,8 +528,8 @@ public class Rechercher extends javax.swing.JPanel {
                                         .addComponent(jLabel4)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField3)
-                                    .addComponent(jTextField2)))
+                                    .addComponent(jTextFieldFin)
+                                    .addComponent(jTextFieldDebut)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -429,22 +537,22 @@ public class Rechercher extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonAuPlusTot, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jComboBoxCinema, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField4))))
+                                .addComponent(jTextFieldVille))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jComboBoxTheme, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -457,7 +565,7 @@ public class Rechercher extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jRadioButton5))
                             .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jButtonAuPlusProche, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
@@ -480,26 +588,26 @@ public class Rechercher extends javax.swing.JPanel {
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jFormattedTextFieldJour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2)
                             .addComponent(jLabel3)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldDebut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1)
+                        .addComponent(jButtonAuPlusTot)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldVille, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jComboBoxCinema, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAuPlusProche, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -511,7 +619,7 @@ public class Rechercher extends javax.swing.JPanel {
                             .addComponent(jRadioButton5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBoxTheme, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel13))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton3))
@@ -547,16 +655,35 @@ public class Rechercher extends javax.swing.JPanel {
         accueil.showPanel(new Film());
     }//GEN-LAST:event_jTextArea6MouseClicked
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        Accueil accueil = (Accueil) SwingUtilities.getWindowAncestor(this);
+        accueil.showPanel(new Rechercher());
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButtonAuPlusTotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAuPlusTotActionPerformed
+        //Au plus tôt
+        Date d = new Date();
+        SimpleDateFormat fJour = new SimpleDateFormat("dd/MM");
+        SimpleDateFormat fHeure = new SimpleDateFormat("H:mm");
+        jFormattedTextFieldJour.setText(fJour.format(d));
+        jTextFieldDebut.setText(fHeure.format(d));
+    }//GEN-LAST:event_jButtonAuPlusTotActionPerformed
+
+    private void jButtonAuPlusProcheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAuPlusProcheActionPerformed
+        jTextFieldVille.setText("Toulouse");
+        jComboBoxCinema.setSelectedIndex(3);
+    }//GEN-LAST:event_jButtonAuPlusProcheActionPerformed
+
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAccueil;
     private javax.swing.JButton btnCompte;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JButton jButtonAuPlusProche;
+    private javax.swing.JButton jButtonAuPlusTot;
+    private javax.swing.JComboBox<String> jComboBoxCinema;
+    private javax.swing.JComboBox<String> jComboBoxTheme;
+    private javax.swing.JFormattedTextField jFormattedTextFieldJour;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -601,9 +728,9 @@ public class Rechercher extends javax.swing.JPanel {
     private javax.swing.JTextArea jTextArea8;
     private javax.swing.JTextArea jTextArea9;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextFieldDebut;
+    private javax.swing.JTextField jTextFieldFin;
+    private javax.swing.JTextField jTextFieldVille;
     private javax.swing.JLabel lblTitre;
     // End of variables declaration//GEN-END:variables
 }

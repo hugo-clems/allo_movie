@@ -20,6 +20,25 @@ public class Film extends javax.swing.JPanel {
      */
     public Film() {
         initComponents();
+        remplirComboBox();
+    }
+    
+    private void remplirComboBox() {
+        jComboBoxCinema.removeAllItems();
+        jComboBoxCinema.addItem("Cinéma Gaumont");
+        jComboBoxCinema.addItem("Cinéma Popcorn");
+        jComboBoxCinema.addItem("Cinéma du rire");
+        jComboBoxCinema.addItem("Cinéma Labège");
+        
+        jComboBoxSeance.removeAllItems();
+        jComboBoxSeance.addItem("10h50");
+        jComboBoxSeance.addItem("11h20");
+        jComboBoxSeance.addItem("16h30");
+        
+        jComboBoxNbPlaces.removeAllItems();
+        for (int i = 1; i <= 20; i++) {
+            jComboBoxNbPlaces.addItem(""+i);
+        }
     }
 
     /**
@@ -41,23 +60,26 @@ public class Film extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         commenter = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBoxCinema = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBoxSeance = new javax.swing.JComboBox<>();
+        jComboBoxNbPlaces = new javax.swing.JComboBox<>();
         reserver = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jFormattedTextFieldJour = new javax.swing.JFormattedTextField();
         jSeparator1 = new javax.swing.JSeparator();
 
+        setBackground(new java.awt.Color(60, 63, 65));
         setBorder(new javax.swing.border.MatteBorder(null));
+        setForeground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(1050, 500));
         setMinimumSize(new java.awt.Dimension(1050, 500));
         setPreferredSize(new java.awt.Dimension(1050, 500));
 
+        btnAccueil.setBackground(new java.awt.Color(60, 63, 65));
         btnAccueil.setForeground(new java.awt.Color(255, 255, 255));
         btnAccueil.setText("Accueil");
         btnAccueil.addActionListener(new java.awt.event.ActionListener() {
@@ -66,6 +88,7 @@ public class Film extends javax.swing.JPanel {
             }
         });
 
+        btnCompte.setBackground(new java.awt.Color(60, 63, 65));
         btnCompte.setForeground(new java.awt.Color(255, 255, 255));
         btnCompte.setText("Compte");
         btnCompte.addActionListener(new java.awt.event.ActionListener() {
@@ -74,6 +97,7 @@ public class Film extends javax.swing.JPanel {
             }
         });
 
+        btnRetour.setBackground(new java.awt.Color(60, 63, 65));
         btnRetour.setForeground(new java.awt.Color(255, 255, 255));
         btnRetour.setText("Retour");
         btnRetour.addActionListener(new java.awt.event.ActionListener() {
@@ -112,6 +136,7 @@ public class Film extends javax.swing.JPanel {
         jTextArea2.setOpaque(false);
         jScrollPane2.setViewportView(jTextArea2);
 
+        commenter.setBackground(new java.awt.Color(60, 63, 65));
         commenter.setForeground(new java.awt.Color(255, 255, 255));
         commenter.setText("Déjà vu ce film ? Laisse un commentaire !");
         commenter.addActionListener(new java.awt.event.ActionListener() {
@@ -120,8 +145,9 @@ public class Film extends javax.swing.JPanel {
             }
         });
 
-        jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxCinema.setBackground(new java.awt.Color(60, 63, 65));
+        jComboBoxCinema.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBoxCinema.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Changer de cinéma :");
@@ -132,12 +158,15 @@ public class Film extends javax.swing.JPanel {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText(" Nombre de places :");
 
-        jComboBox2.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxSeance.setBackground(new java.awt.Color(60, 63, 65));
+        jComboBoxSeance.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBoxSeance.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox3.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxNbPlaces.setBackground(new java.awt.Color(60, 63, 65));
+        jComboBoxNbPlaces.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBoxNbPlaces.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        reserver.setBackground(new java.awt.Color(60, 63, 65));
         reserver.setForeground(new java.awt.Color(255, 255, 255));
         reserver.setText("Réserver");
 
@@ -148,11 +177,11 @@ public class Film extends javax.swing.JPanel {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ressources/rsz_star_wars_3.jpg"))); // NOI18N
         jLabel7.setText("jLabel2");
 
-        jFormattedTextField1.setBackground(new java.awt.Color(60, 63, 65));
-        jFormattedTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("d/MM"))));
-        jFormattedTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jFormattedTextField1.setText("JJ/MM");
+        jFormattedTextFieldJour.setBackground(new java.awt.Color(60, 63, 65));
+        jFormattedTextFieldJour.setForeground(new java.awt.Color(255, 255, 255));
+        jFormattedTextFieldJour.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("d/MM"))));
+        jFormattedTextFieldJour.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jFormattedTextFieldJour.setText("26/04");
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(60, 63, 65));
@@ -195,12 +224,12 @@ public class Film extends javax.swing.JPanel {
                                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jComboBoxCinema, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jComboBoxNbPlaces, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jFormattedTextFieldJour, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                    .addComponent(jComboBoxSeance, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                             .addComponent(jLabel6)
                                             .addGap(72, 72, 72))
@@ -243,15 +272,15 @@ public class Film extends javax.swing.JPanel {
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel3)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jComboBoxCinema, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBoxSeance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel4)
-                                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jFormattedTextFieldJour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBoxNbPlaces, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel5)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(8, 8, 8)
@@ -304,10 +333,10 @@ public class Film extends javax.swing.JPanel {
     private javax.swing.JButton btnCompte;
     private javax.swing.JButton btnRetour;
     private javax.swing.JButton commenter;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JComboBox<String> jComboBoxCinema;
+    private javax.swing.JComboBox<String> jComboBoxNbPlaces;
+    private javax.swing.JComboBox<String> jComboBoxSeance;
+    private javax.swing.JFormattedTextField jFormattedTextFieldJour;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

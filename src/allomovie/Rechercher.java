@@ -5,7 +5,6 @@
  */
 package allomovie;
 
-import java.awt.Color;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
@@ -135,6 +134,11 @@ public class Rechercher extends javax.swing.JPanel {
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("jLabel7");
         jLabel10.setBorder(new javax.swing.border.MatteBorder(null));
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("jLabel7");
@@ -212,6 +216,11 @@ public class Rechercher extends javax.swing.JPanel {
         jTextArea6.setText("   Cinéma Gaumont\n       26/04/2018\n            10h50");
         jTextArea6.setAutoscrolls(false);
         jTextArea6.setOpaque(false);
+        jTextArea6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextArea6MouseClicked(evt);
+            }
+        });
         jScrollPane7.setViewportView(jTextArea6);
 
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -525,8 +534,18 @@ public class Rechercher extends javax.swing.JPanel {
      */
     private void btnAccueilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccueilActionPerformed
         Accueil accueil = (Accueil) SwingUtilities.getWindowAncestor(this);
-        accueil.showPanel(new Rechercher2());
+        accueil.showPanel(new Rechercher());
     }//GEN-LAST:event_btnAccueilActionPerformed
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        Accueil accueil = (Accueil) SwingUtilities.getWindowAncestor(this);
+        accueil.showPanel(new Film());
+    }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void jTextArea6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea6MouseClicked
+        Accueil accueil = (Accueil) SwingUtilities.getWindowAncestor(this);
+        accueil.showPanel(new Film());
+    }//GEN-LAST:event_jTextArea6MouseClicked
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -114,6 +114,11 @@ public class Film extends javax.swing.JPanel {
 
         commenter.setForeground(new java.awt.Color(255, 255, 255));
         commenter.setText("Déjà vu ce film ? Laisse un commentaire !");
+        commenter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                commenterActionPerformed(evt);
+            }
+        });
 
         jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -276,7 +281,7 @@ public class Film extends javax.swing.JPanel {
      */
     private void btnAccueilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccueilActionPerformed
         Accueil accueil = (Accueil) SwingUtilities.getWindowAncestor(this);
-        accueil.showPanel(new Rechercher2());
+        accueil.showPanel(new Rechercher());
     }//GEN-LAST:event_btnAccueilActionPerformed
 
     /**
@@ -285,8 +290,13 @@ public class Film extends javax.swing.JPanel {
      */
     private void btnRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetourActionPerformed
         Accueil accueil = (Accueil) SwingUtilities.getWindowAncestor(this);
-        accueil.showPanel(new Rechercher2());
+        accueil.showPanel(new Rechercher());
     }//GEN-LAST:event_btnRetourActionPerformed
+
+    private void commenterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_commenterActionPerformed
+        Accueil accueil = (Accueil) SwingUtilities.getWindowAncestor(this);
+        accueil.showPanel(new Avis());
+    }//GEN-LAST:event_commenterActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

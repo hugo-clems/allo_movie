@@ -113,8 +113,18 @@ public class Avis extends javax.swing.JPanel {
         jRadioButton5.setText("5");
 
         jButton1.setText("Annuler");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Commenter");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -211,7 +221,7 @@ public class Avis extends javax.swing.JPanel {
      */
     private void btnAccueilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccueilActionPerformed
         Accueil accueil = (Accueil) SwingUtilities.getWindowAncestor(this);
-        accueil.showPanel(new Rechercher2());
+        accueil.showPanel(new Rechercher());
     }//GEN-LAST:event_btnAccueilActionPerformed
 
     /**
@@ -220,8 +230,19 @@ public class Avis extends javax.swing.JPanel {
      */
     private void btnRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetourActionPerformed
         Accueil accueil = (Accueil) SwingUtilities.getWindowAncestor(this);
-        accueil.showPanel(new Rechercher2());
+        accueil.showPanel(new Film());
     }//GEN-LAST:event_btnRetourActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Accueil accueil = (Accueil) SwingUtilities.getWindowAncestor(this);
+        accueil.showPanel(new Film());
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        JOptionPane.showMessageDialog(null, "Votre avis a bien été enregistré !");
+        Accueil accueil = (Accueil) SwingUtilities.getWindowAncestor(this);
+        accueil.showPanel(new Film());
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

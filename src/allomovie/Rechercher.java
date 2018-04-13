@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package allomovie;
 
 import java.text.SimpleDateFormat;
@@ -11,8 +6,8 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 /**
- *
- * @author hugo
+ * @author CLEMENT Hugo - DL 1
+ * @author MORIN Céline - DL 1
  */
 public class Rechercher extends javax.swing.JPanel {
 

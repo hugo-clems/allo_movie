@@ -1,2 +1,6 @@
 # allo_movie
-Prototype haute-fidélité application allo_movie - M1 DL - CLEMENT Hugo &amp; MORIN Céline - UCDUX
+## Prototype haute-fidélité - UCDUX
+
+Réalise par CLEMENT Hugo & MORIN Céline étudiants M1 DL.
+
+Basé sur la maquette moyenne-fidélité de CLEMENT Hugo.

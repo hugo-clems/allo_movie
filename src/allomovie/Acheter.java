@@ -50,12 +50,14 @@ public class Acheter extends javax.swing.JPanel {
         jTextField3 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(60, 63, 65));
         setBorder(new javax.swing.border.MatteBorder(null));
         setForeground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(1050, 500));
         setMinimumSize(new java.awt.Dimension(1050, 500));
         setPreferredSize(new java.awt.Dimension(1050, 500));
 
+        btnAccueil.setBackground(new java.awt.Color(60, 63, 65));
         btnAccueil.setForeground(new java.awt.Color(255, 255, 255));
         btnAccueil.setText("Accueil");
         btnAccueil.addActionListener(new java.awt.event.ActionListener() {
@@ -64,6 +66,7 @@ public class Acheter extends javax.swing.JPanel {
             }
         });
 
+        btnCompte.setBackground(new java.awt.Color(60, 63, 65));
         btnCompte.setForeground(new java.awt.Color(255, 255, 255));
         btnCompte.setText("Compte");
         btnCompte.addActionListener(new java.awt.event.ActionListener() {
@@ -72,6 +75,7 @@ public class Acheter extends javax.swing.JPanel {
             }
         });
 
+        btnRetour.setBackground(new java.awt.Color(60, 63, 65));
         btnRetour.setForeground(new java.awt.Color(255, 255, 255));
         btnRetour.setText("Retour");
         btnRetour.addActionListener(new java.awt.event.ActionListener() {

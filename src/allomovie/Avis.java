@@ -123,7 +123,7 @@ public class Avis extends javax.swing.JPanel {
         jRadioButton5.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton5.setText("5");
 
-        jButton1.setBackground(new java.awt.Color(60, 63, 65));
+        jButton1.setBackground(new java.awt.Color(175, 0, 0));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Annuler");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -132,7 +132,7 @@ public class Avis extends javax.swing.JPanel {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(60, 63, 65));
+        jButton2.setBackground(new java.awt.Color(51, 126, 51));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Commenter");
         jButton2.addActionListener(new java.awt.event.ActionListener() {

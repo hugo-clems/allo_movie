@@ -117,6 +117,7 @@ public class Film extends javax.swing.JPanel {
 
         jScrollPane1.setBorder(null);
 
+        jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea1.setColumns(20);
         jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
@@ -128,6 +129,7 @@ public class Film extends javax.swing.JPanel {
 
         jScrollPane2.setBorder(null);
 
+        jTextArea2.setEditable(false);
         jTextArea2.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea2.setColumns(20);
         jTextArea2.setForeground(new java.awt.Color(255, 255, 255));
@@ -166,7 +168,7 @@ public class Film extends javax.swing.JPanel {
         jComboBoxNbPlaces.setForeground(new java.awt.Color(255, 255, 255));
         jComboBoxNbPlaces.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        reserver.setBackground(new java.awt.Color(60, 63, 65));
+        reserver.setBackground(new java.awt.Color(51, 126, 51));
         reserver.setForeground(new java.awt.Color(255, 255, 255));
         reserver.setText("Réserver");
 

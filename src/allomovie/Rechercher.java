@@ -188,6 +188,7 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea1.setColumns(20);
         jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
@@ -201,6 +202,7 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane3.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextArea2.setEditable(false);
         jTextArea2.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea2.setColumns(20);
         jTextArea2.setForeground(new java.awt.Color(255, 255, 255));
@@ -214,6 +216,7 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane4.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane4.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextArea3.setEditable(false);
         jTextArea3.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea3.setColumns(20);
         jTextArea3.setForeground(new java.awt.Color(255, 255, 255));
@@ -227,6 +230,7 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane5.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane5.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextArea4.setEditable(false);
         jTextArea4.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea4.setColumns(20);
         jTextArea4.setForeground(new java.awt.Color(255, 255, 255));
@@ -240,6 +244,7 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane6.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane6.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextArea5.setEditable(false);
         jTextArea5.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea5.setColumns(20);
         jTextArea5.setForeground(new java.awt.Color(255, 255, 255));
@@ -253,6 +258,7 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane7.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane7.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextArea6.setEditable(false);
         jTextArea6.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea6.setColumns(20);
         jTextArea6.setForeground(new java.awt.Color(255, 255, 255));
@@ -276,6 +282,7 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane8.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane8.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextArea7.setEditable(false);
         jTextArea7.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea7.setColumns(20);
         jTextArea7.setForeground(new java.awt.Color(255, 255, 255));
@@ -294,6 +301,7 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane9.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane9.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextArea8.setEditable(false);
         jTextArea8.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea8.setColumns(20);
         jTextArea8.setForeground(new java.awt.Color(255, 255, 255));
@@ -307,6 +315,7 @@ public class Rechercher extends javax.swing.JPanel {
         jScrollPane10.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane10.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
+        jTextArea9.setEditable(false);
         jTextArea9.setBackground(new java.awt.Color(60, 63, 65));
         jTextArea9.setColumns(20);
         jTextArea9.setForeground(new java.awt.Color(255, 255, 255));
